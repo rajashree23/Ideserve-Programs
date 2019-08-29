@@ -1,2 +1,2 @@
 # Ideserve-Programs
-#The programming questions are solved in c++ language only.
+#The programming questions are solved in C++ language only.
