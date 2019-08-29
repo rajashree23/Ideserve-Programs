@@ -2,17 +2,17 @@
 
     using namespace std;
 
-     
+   
 
-    int subset_sum(int a[],int n, int sum)
+    int subset_sum(int a[1000],int n, int sum)
 
     {
 
-    
+   
 
-        int result[n+1][sum+1];
+       
 
-     
+      int result[n+1][sum+1];
 
      
 
@@ -26,7 +26,7 @@
 
      
 
-        
+       
 
         for(j=1;j<=sum;j++)
 
@@ -34,28 +34,28 @@
 
      
 
-        
+       
 
         for(i=1;i<=n;i++)
 
         {
 
-            
+           
 
             for(j=1;j<=sum;j++)
 
             {
-             if(j<a[i])
+             if(j<a[i-1])
                result[i][j]=result[i-1][j];
             else
-            result[i][j]=result[i-1][j]||result[i-1][j-a[j]];
+            result[i][j]=result[i-1][j]||result[i-1][j-a[i-1]];
             }
 
         }
 
      
 
-        
+       
 
         return result[n][sum];
 
@@ -113,8 +113,11 @@
 
      
 
-        cout<<endl; 
+        cout<<endl;
 
         return 0;
 
     }
+	
+	
+	
